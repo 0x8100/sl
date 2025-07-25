@@ -90,7 +90,10 @@ int main(int argc, char *argv[])
         }
     }
     initscr();
-    signal(SIGINT, SIG_IGN);
+    /*
+     * If you are truly busy you can be forgiven, but you must recognize grace
+     * signal(SIGINT, SIG_IGN);
+     */
     noecho();
     curs_set(0);
     nodelay(stdscr, TRUE);
